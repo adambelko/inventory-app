@@ -1,5 +1,5 @@
-import Item from "../models/item";
-import asyncHandler from "express-async-handler";
+const Item = require("../models/item");
+const asyncHandler = require("express-async-handler");
 
 exports.index = asyncHandler(async (req, res, next) => {
     res.send("NOT IMPLEMENTED: Site Home Page");

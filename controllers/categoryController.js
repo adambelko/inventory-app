@@ -1,5 +1,5 @@
-import category from "../models/category";
-import asyncHandler from "express-async-handler";
+const category = require("../models/category");
+const asyncHandler = require("express-async-handler");
 
 // Display list of all Category.
 exports.category_list = asyncHandler(async (req, res, next) => {

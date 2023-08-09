@@ -1,5 +1,5 @@
-import ItemInstance from "../models/item_instance";
-import asyncHandler from "express-async-handler";
+const ItemInstance = require("../models/item_instance");
+const asyncHandler = require("express-async-handler");
 
 // Display list of all ItemInstances.
 exports.itemInstance_list = asyncHandler(async (req, res, next) => {
