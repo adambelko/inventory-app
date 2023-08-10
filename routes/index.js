@@ -6,7 +6,7 @@ const item_controller = require("../controllers/itemController");
 const itemInstance_Controller = require("../controllers/itemInstanceController");
 
 /* GET home page. */
-router.get("/", item_controller.index);
+router.get("/", item_controller.item_index);
 
 // GET request for creating a Book. NOTE This must come before routes that display Book (uses id).
 router.get("/item/create", item_controller.item_create_get);
@@ -30,7 +30,7 @@ router.post("/item/:id/update", item_controller.item_update_post);
 router.get("/item/:id", item_controller.item_detail);
 
 // GET request for list of all item items.
-router.get("/items", item_controller.item_list);
+// router.get("/items", item_controller.item_list);
 
 /// category ROUTES ///
 
