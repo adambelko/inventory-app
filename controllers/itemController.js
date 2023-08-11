@@ -3,7 +3,7 @@ const asyncHandler = require("express-async-handler");
 
 // Display list of all items.
 exports.item_index = asyncHandler(async (req, res, next) => {
-    const allItems = await Item.find({}, "name price").sort().exec();
+    const allItems = await Item.find({}, "name price").sort({ name: 1 }).exec();
     res.render("index", { title: "All Items", items_list: allItems });
 });
 

@@ -6,12 +6,10 @@
 	<%- include("./partials/sidebar") -%>
 
 	<main>
-		<h1>Welcome to <em>Inventory App</em></h1>
 		<h2><%= title %></h2>
-		
 		<ul>
-			<% items_list.map((item) => { %>
-				<li><%= item.name %> - $<%= item.price %></li>
+			<% category_list.map((category) => { %>
+				<li><%= category.name %></li>
 			<% }) %>
 		</ul>
 	</main>
