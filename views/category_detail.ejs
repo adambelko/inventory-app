@@ -1,0 +1,14 @@
+
+<%- include("./partials/head") -%>
+
+<body>
+
+	<%- include("./partials/sidebar") -%>
+
+	<main>
+        <h2><%= title %></h2>
+        <span>Name: <%= category_detail.name %></span>
+        <span>Description: <%= category_detail.description ? category_detail.description : "" %></span>
+	</main>
+</body>
+</html>

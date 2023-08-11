@@ -27,3 +27,12 @@ main {
   list-style: none;
   width: fit-content;
 }
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-unit {
+  margin-bottom: 10px;
+}
