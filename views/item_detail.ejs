@@ -1,0 +1,17 @@
+
+<%- include("./partials/head") -%>
+
+<body>
+
+	<%- include("./partials/sidebar") -%>
+
+	<main>
+		<h2><%= title %></h2>
+		
+        <p>Category: <%= item_detail.category.name %></p>
+        <p>Item name: <%= item_detail.name %></p>
+        <p>Item description: <%= item_detail.description %></p>
+        <p>Item price: $<%= item_detail.price %></p>
+	</main>
+</body>
+</html>

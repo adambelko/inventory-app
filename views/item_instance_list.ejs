@@ -7,7 +7,6 @@
 
 	<main>
 		<h2><%= title %></h2>
-        <% console.log(item_instance_list) %>
 		<ul>
 			<% item_instance_list.map((itemInstance) => { %>
 				<li><%= itemInstance.item.name %> - $<%= itemInstance.item.price %></li>

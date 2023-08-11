@@ -11,7 +11,7 @@
 		
 		<ul>
 			<% items_list.map((item) => { %>
-				<li><%= item.name %> - $<%= item.price %></li>
+				<a href="<%= item.url %>"><li><%= item.name %> - $<%= item.price %> (<%= item.category.name %>)</li></a>
 			<% }) %>
 		</ul>
 	</main>
