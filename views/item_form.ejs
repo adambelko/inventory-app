@@ -1,0 +1,50 @@
+
+<%- include("./partials/head") -%>
+
+<body>
+
+	<%- include("./partials/sidebar") -%>
+
+	<main>
+        <h2><%= title %></h2>
+
+        <form method="POST" action="">
+            <div class="form-group">
+                <label for="name">Name*:</label>
+                <input id="name" class="form-control" type="text" name="name" required="true" value="<%= typeof item === "undefined" ? "" : item.name %>">
+            </div>
+            <div class="form-group">
+                <label for="description">Description*:</label>
+                <input id="description" class="form-control" type="text" name="description" required="true" value="<%= typeof item === "undefined" ? "" : item.description %>">
+            </div>
+            <div class="form-group">
+                <label for="category">Category*:</label>
+                <select id="category" class="form-control" type="select" name="category" required="true">
+                    <% if (typeof category_list !== "undefined") { %>
+                        <% for (let category of category_list) { %>
+                            <% if (typeof item !== "undefined") { %>
+                                <option value="<%= category._id %>" <%= category._id.toString() === item.category._id.toString() ? "selected" : "" %>><%= category.name %></option>
+                                <% } else { %>
+                                    <option value="<%= category._id %>"><%= category.name %></option>
+                                <% } %>
+                            <% } %>
+                        <% } %>
+                    </select>
+            </div>
+            <div class="form-group">
+                <label for="price">Price*:</label>
+                <input id="price" class="form-control" type="text" name="price" required="true" value="<%= typeof item === "undefined" ? "" : item.price %>">
+            </div>
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+        
+        <% if (typeof errors !== "undefined" && errors) { %>
+          <ul>
+            <% for (let error of errors) { %>
+              <li><%= error.msg %></li>
+            <% } %>
+          </ul>
+        <% } %>
+	</main>
+</body>
+</html>

@@ -9,14 +9,12 @@
         <h2><%= title %></h2>
         <form method="POST" action="">
           <div class="form-group">
-            <div class="form-unit">
-              <label for="name">Name*:</label>
-              <input id="name" class="form-control" type="text" name="name" value="<%= typeof category === "undefined" ? "" : category.name %>">
-            </div>
-            <div class="form-unit">
-              <label for="category">Description:</label>
-              <input id="category" class="form-control" type="text" name="description" value="<%= typeof category === "undefined" ? "" : category.description %>">
-            </div>
+            <label for="name">Name*:</label>
+            <input id="name" class="form-control" type="text" name="name" value="<%= typeof category === "undefined" ? "" : category.name %>">
+          </div>
+          <div class="form-group">
+            <label for="category">Description:</label>
+            <input id="category" class="form-control" type="text" name="description" value="<%= typeof category === "undefined" ? "" : category.description %>">
           </div>
           <button type="submit">Submit</button>
         </form>
